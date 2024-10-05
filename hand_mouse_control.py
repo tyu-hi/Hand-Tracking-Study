@@ -1,15 +1,20 @@
-# Using mediapipe library for handtracking
-# run with python hand_mouse_control.py
-# "landmarks": 0-10, starting from wrist and moving to each joing from thumb first pinky finger
-# index_finger is landmark[8]
-# track distance between landmarks to simulate clicking
-
 import cv2
-import mediapipe as mp
+import mediapipe as mp # using mediapipe library for handtracking
 import pyautogui
 import math
 import threading # introduce multithraeding to run hand tracking and clicking recongition asyncrhously
 
+# Run program with python hand_mouse_control.py
+# "landmarks" go from 0-10, starting from wrist and moving to each joing from thumb first pinky finger
+# index_finger is landmark[8]
+# To simulate clicking, track distance between landmarks
+
+"""
+## How to Use ##
+The cursor follows the hand's index finger. 
+To left-click, pinch the index finger and thumb togther.
+To right-click, pinch the index finger and middle finger togther.
+"""
 # initialize MediaPipe hand tracking
 mp_hands = mp.solutions.hands
 hands = mp_hands.Hands(
