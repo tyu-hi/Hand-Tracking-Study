@@ -1,4 +1,4 @@
-# Hand-Tracking-Practice
+# Hand Tracking Study
 
 ## Project Overview
 This project implements hand tracking to control mouse movement and a multiplayer drawing game where players take turns drawing with their hands using OpenCV and MediaPipe. The project allows for real-time detection of hand movements to control a virtual drawing canvas, as well as a guessing game where other players can guess the drawing in real time.
